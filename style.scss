@@ -1,0 +1,224 @@
+:root {
+  font-size: 10px;
+
+  @media (max-width: 1160px) {
+    font-size: 9px;
+  }
+  @media (max-width: 1060px) {
+    font-size: 8px;
+  }
+  @media (max-width: 940px) {
+    font-size: 7px;
+  }
+  @media (max-width: 840px) {
+    font-size: 6.5px;
+  }
+}
+
+@mixin Roboto {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: #621402;
+  margin: 0;
+  cursor: default;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.firstPage {
+  background: linear-gradient(180deg, rgba(146, 32, 7, 0.31) -30%, #621402 85.62%),
+   url(./images/bg.png) no-repeat center top / cover;
+  min-height: 100vh;
+
+    .header {
+      padding-top: 3rem;
+      display: flex;
+
+        &Left {
+          display: flex;
+          align-items: center;
+        
+            .logoSvg {
+              display: block;
+              width: 3rem;
+            
+                svg {
+                  width: 100%;
+                  &:hover {
+                    fill: gray;
+                  }
+                }
+            }
+          
+            &Navigation {
+              display: flex;
+              margin-left: 5.5rem;
+            
+                a {
+                  @include Roboto();
+                  text-decoration: none;
+                  margin-right: 2.5rem;
+                  &:hover {
+                    color: rgb(211, 211, 211);
+                    // text-decoration: underline;
+                  }
+                }
+            }
+          
+        }
+      
+        &Right {
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+        
+            p {
+              @include Roboto();
+              font-size: 1.6rem;
+            }
+          
+            img {
+              width: 3.3rem;
+              height: 3.3rem;
+              border-radius: 50%;
+              margin-left: 1.2rem;
+            }
+        }
+    }
+
+    &Film {
+      margin-top: 7rem;
+      display: flex;
+
+        &Info {
+          @include Roboto();
+
+            h3 {
+              font-size: 2.4rem;
+              opacity: 0.6;
+              margin: 0;
+            }
+
+            h1 {
+              margin: 1.1rem 0 2.4rem;
+              font-size: 3.6rem;
+              font-weight: 700;
+            }
+
+            p {
+              margin: 0;
+              font-size: 1.6rem;
+            }
+
+            .subInfo {
+              display: flex;
+              margin-top: 4.5rem;
+
+                div {
+                  display: flex;
+                  align-items: center;
+                  margin-right: 3rem;
+
+                    p {
+                      font-size: 1.6rem;
+                      margin-left: 1rem;
+                        span {
+                          font-size: 2.4rem;
+                          line-height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &Trailer {
+          width: 10rem;
+          height: 10rem;
+          border-radius: 50%;
+          margin: auto;
+            svg {
+              fill:#621402ad;
+              transition: 0.5s;
+              &:hover {
+                fill: #621402ad;
+                transform: scale(1.1);
+
+                 path {
+                   fill: rgb(207, 203, 203);
+                 }
+              }
+
+              path {
+                fill: rgb(187, 184, 184);
+              }
+            }
+        }
+    }
+
+    &Session {
+      padding-top: 5rem;
+      margin-top: 6rem;
+      padding-bottom: 6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      @include Roboto();
+      font-size: 1.6rem;
+      display: flex;
+      justify-content: space-between;
+    
+        &Date {
+          
+            p {
+              margin: 0;
+              margin-bottom: 2rem;
+            }
+
+            &Blocks {
+              display: flex;
+
+                &Item {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  margin-right: 1.5rem;
+                  width: 9rem;
+                  border: 1px solid rgba(255, 255, 255, 0.5);
+                  border-radius: 5px;
+                
+                    span:nth-child(1) {
+                      text-transform: uppercase;
+                    }
+                  
+                    span:nth-child(2) {
+                      font-size: 3rem;
+                      font-weight: 900;
+                    }
+                  
+                    span:nth-child(3) {
+                      font-size: 1.9rem;
+                    }
+                }
+
+                &Item:nth-child(4) {
+                  margin: 0;
+                }
+            }
+        }
+
+        &Place {
+
+        }
+
+        &Time {
+
+        }
+    }
+}

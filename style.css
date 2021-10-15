@@ -1,0 +1,268 @@
+:root {
+  font-size: 10px;
+}
+
+@media (max-width: 1160px) {
+  :root {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 1060px) {
+  :root {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 940px) {
+  :root {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 840px) {
+  :root {
+    font-size: 6.5px;
+  }
+}
+
+body {
+  background-color: #621402;
+  margin: 0;
+  cursor: default;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.firstPage {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-30%, rgba(146, 32, 7, 0.31)), color-stop(85.62%, #621402)), url(./images/bg.png) no-repeat center top/cover;
+  background: linear-gradient(180deg, rgba(146, 32, 7, 0.31) -30%, #621402 85.62%), url(./images/bg.png) no-repeat center top/cover;
+  min-height: 100vh;
+}
+
+.firstPage .header {
+  padding-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.firstPage .headerLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.firstPage .headerLeft .logoSvg {
+  display: block;
+  width: 3rem;
+}
+
+.firstPage .headerLeft .logoSvg svg {
+  width: 100%;
+}
+
+.firstPage .headerLeft .logoSvg svg:hover {
+  fill: gray;
+}
+
+.firstPage .headerLeftNavigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5.5rem;
+}
+
+.firstPage .headerLeftNavigation a {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-right: 2.5rem;
+}
+
+.firstPage .headerLeftNavigation a:hover {
+  color: lightgray;
+}
+
+.firstPage .headerRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+}
+
+.firstPage .headerRight p {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+}
+
+.firstPage .headerRight img {
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 50%;
+  margin-left: 1.2rem;
+}
+
+.firstPageFilm {
+  margin-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.firstPageFilmInfo {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.firstPageFilmInfo h3 {
+  font-size: 2.4rem;
+  opacity: 0.6;
+  margin: 0;
+}
+
+.firstPageFilmInfo h1 {
+  margin: 1.1rem 0 2.4rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.firstPageFilmInfo p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.firstPageFilmInfo .subInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4.5rem;
+}
+
+.firstPageFilmInfo .subInfo div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 3rem;
+}
+
+.firstPageFilmInfo .subInfo div p {
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+
+.firstPageFilmInfo .subInfo div p span {
+  font-size: 2.4rem;
+  line-height: 100%;
+}
+
+.firstPageFilmTrailer {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.firstPageFilmTrailer svg {
+  fill: #621402ad;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.firstPageFilmTrailer svg:hover {
+  fill: #621402ad;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.firstPageFilmTrailer svg:hover path {
+  fill: #cfcbcb;
+}
+
+.firstPageFilmTrailer svg path {
+  fill: #bbb8b8;
+}
+
+.firstPageSession {
+  padding-top: 5rem;
+  margin-top: 6rem;
+  padding-bottom: 6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.firstPageSessionDate p {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.firstPageSessionDateBlocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.firstPageSessionDateBlocksItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1.5rem;
+  width: 9rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.firstPageSessionDateBlocksItem span:nth-child(1) {
+  text-transform: uppercase;
+}
+
+.firstPageSessionDateBlocksItem span:nth-child(2) {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.firstPageSessionDateBlocksItem span:nth-child(3) {
+  font-size: 1.9rem;
+}
+
+.firstPageSessionDateBlocksItem:nth-child(4) {
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
