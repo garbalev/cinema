@@ -64,12 +64,12 @@ body {
   width: 3rem;
 }
 
-.firstPage .headerLeft .logoSvg svg {
-  width: 100%;
+.firstPage .headerLeft .logoSvg:hover svg {
+  fill: gray;
 }
 
-.firstPage .headerLeft .logoSvg svg:hover {
-  fill: gray;
+.firstPage .headerLeft .logoSvg svg {
+  width: 100%;
 }
 
 .firstPage .headerLeftNavigation {
@@ -233,6 +233,7 @@ body {
 }
 
 .firstPageSessionDateBlocksItem {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -247,6 +248,14 @@ body {
   width: 9rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.firstPageSessionDateBlocksItem:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #621402;
+  border: 1px solid #FFFFFF;
 }
 
 .firstPageSessionDateBlocksItem span:nth-child(1) {
@@ -264,5 +273,264 @@ body {
 
 .firstPageSessionDateBlocksItem:nth-child(4) {
   margin: 0;
+}
+
+.firstPageSessionPlace p {
+  margin: 0;
+}
+
+.firstPageSessionPlaceSelect {
+  cursor: pointer;
+  width: 40rem;
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.firstPageSessionPlaceSelect span {
+  margin: 1.8rem;
+}
+
+.firstPageSessionPlaceSelect svg {
+  margin-left: auto;
+  margin-right: 1.8rem;
+}
+
+.firstPageSessionPlace #placeSelectToggler {
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 10px;
+}
+
+.firstPageSessionPlaceSelectDown {
+  width: 40rem;
+  background-color: rgba(255, 255, 255, 0.082);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.firstPageSessionPlaceSelectDown p {
+  cursor: pointer;
+  padding-left: 1.8rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.firstPageSessionPlaceSelectDown p:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.firstPageSessionPlaceSelectDown p:nth-child(1) {
+  border-top: none;
+}
+
+.firstPageSessionTime p {
+  margin: 0;
+}
+
+.firstPageSessionTimeSelect {
+  cursor: pointer;
+  width: 20rem;
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.firstPageSessionTimeSelect span {
+  margin: 1.8rem;
+}
+
+.firstPageSessionTimeSelect svg {
+  margin-left: auto;
+  margin-right: 1.8rem;
+}
+
+.firstPageSessionTime #timeSelectToggler {
+  display: none;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-top: 10px;
+}
+
+.firstPageSessionTimeSelectDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.082);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.firstPageSessionTimeSelectDown p {
+  width: 33%;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.firstPageSessionTimeSelectDown p:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.firstPageSessionTimeSelectDown p:nth-child(1), .firstPageSessionTimeSelectDown p:nth-child(2), .firstPageSessionTimeSelectDown p:nth-child(3) {
+  border-top: none;
+}
+
+.firstPageSessionTimeSelectDown p:nth-child(3n) {
+  border-right: none;
+}
+
+.firstPage .sessionItem_active {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #621402;
+  border: 1px solid #350a01;
+}
+
+.secondPage {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+}
+
+.secondPage p {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.secondPageScheme {
+  width: 100%;
+}
+
+.secondPagePayment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 6rem;
+}
+
+.secondPagePaymentPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secondPagePaymentPrice span:nth-child(2) {
+  font-size: 5rem;
+  margin-left: 1rem;
+  line-height: 5rem;
+}
+
+.secondPagePaymentBuy {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  padding: 1.8rem 0;
+}
+
+.secondPagePaymentBuy:hover {
+  color: #621402;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #FFFFFF;
+}
+
+.rotateSvgOpen {
+  -webkit-animation: svgOpen 1s;
+          animation: svgOpen 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.rotateSvgClose {
+  -webkit-animation: svgClose 1s;
+          animation: svgClose 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes svgOpen {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes svgOpen {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes svgClose {
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes svgClose {
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */

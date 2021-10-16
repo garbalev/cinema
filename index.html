@@ -11,14 +11,14 @@
       defer
     ></script>
     <script src="./content.js" defer></script>
-    <script src="./main.js" defer></script>
+    <script src="./session.js" defer></script>
   </head>
   <body>
     <div class="firstPage">
       <div class="wrapper">
         <header class="header">
           <div class="headerLeft">
-            <a href="/" class="logoSvg">
+            <a href="/" class="logoSvg" tabindex="1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -69,11 +69,11 @@
               </svg>
             </a>
             <nav class="headerLeftNavigation">
-              <a href="#">Главная</a>
-              <a href="#">Фильмы</a>
-              <a href="#">Кинотеатры</a>
-              <a href="#">События</a>
-              <a href="#">Поддержка</a>
+              <a href="#" tabindex="2">Главная</a>
+              <a href="#" tabindex="3">Фильмы</a>
+              <a href="#" tabindex="4">Кинотеатры</a>
+              <a href="#" tabindex="5">События</a>
+              <a href="#" tabindex="6">Поддержка</a>
             </nav>
           </div>
           <div class="headerRight">
@@ -111,7 +111,7 @@
               </div>
             </div>
           </div>
-          <a href="#" class="firstPageFilmTrailer">
+          <a href="#" class="firstPageFilmTrailer" tabindex="7">
             <svg
               width="100"
               height="100"
@@ -143,37 +143,84 @@
           <div class="firstPageSessionDate">
             <p>Дата</p>
             <div class="firstPageSessionDateBlocks">
-              <!-- <div class="firstPageSessionDateBlocksItem">
-                <span>окт</span>
-                <span>15</span>
-                <span>пт</span>
-              </div>
-              <div class="firstPageSessionDateBlocksItem">
-                <span>окт</span>
-                <span>16</span>
-                <span>сб</span>
-              </div>
-              <div class="firstPageSessionDateBlocksItem">
-                <span>окт</span>
-                <span>17</span>
-                <span>вс</span>
-              </div>
-              <div class="firstPageSessionDateBlocksItem">
-                <span>окт</span>
-                <span>18</span>
-                <span>пн</span>
-              </div> -->
+              <!-- append div>span*3 / content.js -->
             </div>
           </div>
           <div class="firstPageSessionPlace">
             <p>Кинотеатр</p>
+            <div class="firstPageSessionPlaceSelect">
+              <span>Беларусь, ул. Романовская слобода 28</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="9"
+                viewBox="0 0 16 9"
+                fill="none"
+                class="rotateSvgOpen"
+              >
+                <path
+                  d="M14.75 1L7.75 8L0.75 0.999999"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div id="placeSelectToggler">
+              <div class="firstPageSessionPlaceSelectDown">
+              <p>Ракета, пер. Рабочий 3</p>
+              <p>VokaCinema, ул. Петра Мстиславца 11</p>
+              <p>Берестье, просп. Газеты Правда</p>
+              <p>SilverScreen, ул. Бобруйская 6</p>
+              <p>Пионер, ул. Энгельса 20</p>
+              <p>Беларусь, ул. Романовская слобода 28</p>
+              </div>
+            </div>
           </div>
           <div class="firstPageSessionTime">
             <p>Время</p>
+            <div class="firstPageSessionTimeSelect">
+              <span>22:00</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="9"
+                viewBox="0 0 16 9"
+                fill="none"
+                class="rotateSvgOpen"
+              >
+                <path
+                  d="M14.75 1L7.75 8L0.75 0.999999"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div id="timeSelectToggler">
+              <div class="firstPageSessionTimeSelectDown">
+                <!-- append <p> / content.js -->
+              </div>
+            </div>
           </div>
         </div>
-        <br />
-        <h1>hjjjkjkn</h1>
+      </div>
+    </div>
+    <div class="secondPage">
+      <div class="wrapper">
+        <p>Выберите место</p>
+        <div class="secondPageScheme">
+          here ll be a scheme
+        </div>
+        <div class="secondPagePayment">
+          <div class="secondPagePaymentPrice">
+            <span>Всего к оплате:</span>
+            <span>15p</span>
+          </div>
+          <a href="#" class="secondPagePaymentBuy">
+            Перейти к оплате
+          </a>
+        </div>
       </div>
     </div>
   </body>
