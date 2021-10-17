@@ -356,7 +356,12 @@ body {
   @include Roboto();
   font-size: 1.8rem;
 
-      p {
+      .secondPageSchemeWrapper {
+        width: 95%;
+        margin: 0 auto; 
+      }
+
+      &Tag {
         font-size: 2.5rem;
         letter-spacing: 0.1em;
         text-align: center;
@@ -365,7 +370,72 @@ body {
 
       &Scheme {
         width: 100%;
-        
+        background-color: #551102;
+        border-radius: 10px;
+        min-height: 60vh;
+        border: 1px solid rgba(36, 36, 36, 0.226);
+
+          &Screen {
+            width: 100%;
+            height: 1rem;
+            background-color: rgba(0, 0, 0, 0.24);
+            border-radius: 5px;
+            margin-top: 4rem;
+          }   
+          
+          &ScreenLight {
+            width: 96%;
+            height: 6rem;
+            margin: 0 auto;
+            position: relative;
+            background: linear-gradient(180deg, rgba(196, 196, 196, 0.21) 0%,
+             rgba(196, 196, 196, 0) 100%);
+            &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 0;
+              border-top: 6rem solid #551102;
+              border-right: 4rem solid transparent;
+              
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              right: 0;
+              top: 0;
+              border-top: 6rem solid #551102;
+              border-left: 4rem solid transparent;
+            }
+          }
+
+          &About {
+            display: flex;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            margin: 5rem 0 3rem;
+
+              div {
+                display: flex;
+                align-items: center;
+                margin-right: 3rem;
+
+                  svg {
+                    width: 4rem;
+                  }
+
+                  span {
+                    margin-left: 1rem;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                  }
+              }
+
+              div:nth-child(3) {
+                margin: 0;
+              } 
+          }
       }
 
       &Payment {
