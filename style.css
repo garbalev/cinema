@@ -474,6 +474,68 @@ body {
   border-left: 4rem solid transparent;
 }
 
+.secondPageSchemeSeating {
+  width: 100%;
+}
+
+.secondPageSchemeSeating svg {
+  width: 3.5rem;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.secondPageSchemeSeating svg:hover {
+  fill: rgba(255, 255, 255, 0.57);
+}
+
+.secondPageSchemeSeating .schemeBigBlocks, .secondPageSchemeSeating .schemeSmallBlocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.secondPageSchemeSeating .schemeBigBlocks .bigBlock, .secondPageSchemeSeating .schemeBigBlocks .smallBlock, .secondPageSchemeSeating .schemeSmallBlocks .bigBlock, .secondPageSchemeSeating .schemeSmallBlocks .smallBlock {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.secondPageSchemeSeating .schemeBigBlocks .bigBlockRow, .secondPageSchemeSeating .schemeBigBlocks .smallBlockRow, .secondPageSchemeSeating .schemeSmallBlocks .bigBlockRow, .secondPageSchemeSeating .schemeSmallBlocks .smallBlockRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.8rem;
+}
+
+.secondPageSchemeSeating .schemeBigBlocks .bigBlock svg:last-of-type, .secondPageSchemeSeating .schemeBigBlocks .smallBlock svg:last-of-type, .secondPageSchemeSeating .schemeSmallBlocks .bigBlock svg:last-of-type, .secondPageSchemeSeating .schemeSmallBlocks .smallBlock svg:last-of-type {
+  margin: 0;
+}
+
+.secondPageSchemeSeating .schemeBigBlocks .bigBlock span:last-of-type, .secondPageSchemeSeating .schemeBigBlocks .smallBlock span:last-of-type, .secondPageSchemeSeating .schemeSmallBlocks .bigBlock span:last-of-type, .secondPageSchemeSeating .schemeSmallBlocks .smallBlock span:last-of-type {
+  margin: 0;
+}
+
 .secondPageSchemeAbout {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -52,9 +52,8 @@ for (let i = 8; i <= 24; i += 2) {
   $(".firstPageSessionTimeSelectDown").append(`
         <p>${i}:00</p>
   `);
-
-  // console.log(`'${i}:00'`);
 }
+
 
 $(".firstPageSessionDateBlocksItem").click(function () {
   $(".firstPageSessionDateBlocksItem")
