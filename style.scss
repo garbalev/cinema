@@ -410,7 +410,6 @@ body {
           }
 
           &Seating {
-            // background-color: #FFFFFF;
             width: 100%;
             // display: flex;
             // flex-direction: column;
@@ -456,44 +455,7 @@ body {
                   .bigBlock span:last-of-type, .smallBlock span:last-of-type {
                     margin: 0;
                   } 
-              }
-
-        
-
-              // .schemeSmallBlocks {
-              //   background-color: aqua;
-              //   display: flex;
-              //   flex-wrap: wrap;
-              //   width: 100%;
-                
-
-              //     .smallBlock {
-              //       background-color: black;
-              //       margin: 0 auto;
-              //       margin-top: 6rem;
-              //       width: fit-content;
-              //       display: flex;
-              //       flex-direction: column;
-
-              //         &Row {
-              //           display: flex;
-                        
-              //           width: fit-content;
-              //           margin-bottom: 0.8rem;
-              //         }
-
-              //         svg:last-of-type {
-              //           margin: 0;
-              //         }
-              //     }
-
-              //     .smallBlock span:last-of-type {
-              //       margin: 0;
-              //     } 
-              // }
-
-
-              
+              }              
           }
 
           &About {
@@ -579,4 +541,37 @@ body {
 
 @keyframes svgClose {
   100%{transform: rotate(180deg);} 
+}
+
+#seatHover {
+  position: absolute;
+  top: 900px;
+  left: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #621402;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  width: 140px;
+  height: 90px;
+  @include Roboto();
+  
+
+    span:nth-child(1) {
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    span:nth-child(2) {
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    span:nth-child(3) {
+      font-size: 18px;
+      font-weight: 800;
+    }
 }

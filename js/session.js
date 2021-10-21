@@ -16,3 +16,4 @@ $(".firstPageSessionTimeSelectDown p, .firstPageSessionPlaceSelectDown p").click
     topBlock.html($(this).text());
     $(this).parent().parent().hide('1000');
 });
+
