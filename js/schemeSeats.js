@@ -180,7 +180,6 @@ function seatsMaker() {
     }
   }
 
-  console.log($("[data-sector]").length);
   for (let i = 0; i < $("[data-sector]").length; i++) {
     let sectorNum = `[data-sector]:eq(${i})`;
     for (let j = 0; j < $(`${sectorNum} span`).length; j++) {
@@ -193,6 +192,16 @@ function seatsMaker() {
       }
     }
   }
+
+  console.log($("[data-seat]").length);
+  for (let i = 0; i < 15; i++) {
+    console.log(Math.floor(Math.random() * $("[data-seat]").length));
+    let randomNum = Math.floor(Math.random() * $("[data-seat]").length);
+    $("[data-seat]")
+      .eq(randomNum)
+      .css("fill", "rgba(255, 255, 255, 0.1)")
+      .addClass("reserved");
+  }
 }
 
 function seatsAction() {
@@ -202,16 +211,23 @@ function seatsAction() {
 
   $(".secondPageSchemeSeating svg").hover(
     function () {
+      const leftPosition = $(this).offset().left;
+      const topPosition = $(this).offset().top;
       sector = $(this).parents().eq(1).data("sector");
       row = $(this).parent().data("row");
       seat = $(this).data("seat");
-      const leftPosition = $(this).offset().left;
-      const topPosition = $(this).offset().top;
-      $("#seatHover").html(`
+      if ($(this).hasClass("reserved")) {
+        $("#seatHover").html(`
+        <span>Извините,</span>
+        <span>Занято</span>
+        `);
+      } else {
+        $("#seatHover").html(`
         <span>${sector}</span>
         <span>${seat}</span>
         <span>${row}</span>
       `);
+      }
       $("#seatHover").css({
         display: "flex",
         top: `${topPosition - 95}px`,
@@ -224,7 +240,9 @@ function seatsAction() {
   );
 
   $(".secondPageSchemeSeating svg").click(function () {
-    if ($(this).hasClass("selectedSvg")) {
+    if ($(this).hasClass("reserved")) {
+      return;
+    } else if ($(this).hasClass("selectedSvg")) {
       $(this).removeClass("selectedSvg").removeAttr("style");
       let regexp = new RegExp(`${sector}.${row}.${seat}`);
       for (let i = 0; i < $(".info").length; i++) {
@@ -254,7 +272,6 @@ function seatsAction() {
                 </div>
               </div>
       `);
-
       $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
       $("#cinemaName").html(`Кинотеатр ${cinemaName}`);
     } else {
