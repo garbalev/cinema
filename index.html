@@ -26,7 +26,7 @@
                 height="30"
                 viewBox="0 0 30 30"
                 fill="white"
-              >
+              > 
                 <g clip-path="url(#clip0_1:7)">
                   <path
                     d="M29.3629 11.243H1.85261C1.50748 11.243 1.22736 11.5232 1.22736 11.8683V26.8739C1.22736 28.597 2.62915 30 4.3535 30H26.8619C28.5863 30 29.988 28.597 29.988 26.8739V11.8683C29.9881 11.5231 29.708 11.243 29.3629 11.243ZM28.7376 26.8738C28.7376 27.908 27.8961 28.7495 26.8619 28.7495H4.35356C3.3194 28.7495 2.47786 27.908 2.47786 26.8738V12.4935H28.7376V26.8738Z"
@@ -150,7 +150,7 @@
           <div class="firstPageSessionPlace">
             <p>Кинотеатр</p>
             <div class="firstPageSessionPlaceSelect">
-              <span>Беларусь, ул. Романовская слобода 28</span>
+              <span>Выберите Кинотеатр</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -169,19 +169,21 @@
             </div>
             <div id="placeSelectToggler">
               <div class="firstPageSessionPlaceSelectDown">
-                <p data-name="rocket">Ракета, пер. Рабочий 3</p>
-                <p data-name="voka">VokaCinema, ул. Петра Мстиславца 11</p>
-                <p data-name="brest">Берестье, просп. Газеты Правда</p>
-                <p data-name="silver">SilverScreen, ул. Бобруйская 6</p>
-                <p data-name="pioneer">Пионер, ул. Энгельса 20</p>
-                <p data-name="belarus">Беларусь, ул. Романовская слобода 28</p>
+                <p data-cinema="rocket">Ракета, пер. Рабочий 3</p>
+                <p data-cinema="voka">VokaCinema, ул. Петра Мстиславца 11</p>
+                <p data-cinema="brest">Берестье, просп. Газеты Правда</p>
+                <p data-cinema="silver">SilverScreen, ул. Бобруйская 6</p>
+                <p data-cinema="pioneer">Пионер, ул. Энгельса 20</p>
+                <p data-cinema="belarus">
+                  Беларусь, ул. Романовская слобода 28
+                </p>
               </div>
             </div>
           </div>
           <div class="firstPageSessionTime">
             <p>Время</p>
             <div class="firstPageSessionTimeSelect">
-              <span>22:00</span>
+              <span>Выберите время</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -272,19 +274,26 @@
             </div>
           </div>
         </div>
+        <h3>Мои билеты</h3>
         <div class="secondPagePayment">
-          <div class="secondPagePaymentPrice">
-            <span>Всего к оплате:</span>
-            <span>15p</span>
+          <div class="secondPagePaymentWrapper">
+            <div class="secondPagePaymentSeats">
+              <span id="cinemaName">Кинотеатр Беларусь</span>
+            </div>
+            <div class="secondPagePaymentBuy">
+              <span>Итого:</span>
+              <span id="totalPrice"></span>
+              <a href="#"> Перейти к оплате </a>
+            </div>
           </div>
-          <a href="#" class="secondPagePaymentBuy"> Перейти к оплате </a>
+          
         </div>
       </div>
     </div>
     <div id="seatHover">
-      <span>Сектор 1</span>
+      <!-- <span>Сектор 1</span>
       <span>Место 16</span>
-      <span>Ряд 2</span>
+      <span>Ряд 2</span> -->
     </div>
   </body>
 </html>

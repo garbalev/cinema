@@ -1,6 +1,7 @@
 $(".firstPageSessionPlaceSelect").click(function() {
     $(".firstPageSessionPlaceSelect svg").toggleClass('rotateSvgOpen rotateSvgClose');
     $("#placeSelectToggler").toggle('1000');
+    $('html, body').animate({scrollTop: '1000'}, 1500);
 });
 
 
@@ -15,5 +16,7 @@ $(".firstPageSessionTimeSelectDown p, .firstPageSessionPlaceSelectDown p").click
     const topBlock = $(this).parent().parent().siblings().children().eq(0);
     topBlock.html($(this).text());
     $(this).parent().parent().hide('1000');
+
+    
 });
 

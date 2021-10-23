@@ -417,6 +417,7 @@ body {
   font-weight: 400;
   color: #FFFFFF;
   font-size: 1.8rem;
+  display: none;
 }
 
 .secondPage .secondPageSchemeWrapper {
@@ -429,6 +430,7 @@ body {
   letter-spacing: 0.1em;
   text-align: center;
   margin: 3rem 0;
+  font-weight: bold;
 }
 
 .secondPageScheme {
@@ -572,32 +574,75 @@ body {
   margin: 0;
 }
 
+.secondPage h3 {
+  text-align: center;
+  margin: 2rem;
+}
+
 .secondPagePayment {
+  margin-bottom: 2rem;
+  width: 100%;
+  background-color: #551102;
+  border-radius: 10px;
+  border: 1px solid rgba(36, 36, 36, 0.226);
+}
+
+.secondPagePaymentWrapper {
+  width: 95%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 6rem;
+  padding: 0.5rem 0 1rem;
 }
 
-.secondPagePaymentPrice {
+.secondPagePaymentWrapper .secondPagePaymentSeats #cinemaName {
+  opacity: 0.6;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentSeats .payForSeat {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.secondPagePaymentPrice span:nth-child(2) {
-  font-size: 5rem;
-  margin-left: 1rem;
-  line-height: 5rem;
+.secondPagePaymentWrapper .secondPagePaymentSeats .payForSeat svg {
+  margin: 0 1rem;
 }
 
-.secondPagePaymentBuy {
+.secondPagePaymentWrapper .secondPagePaymentSeats .payForSeatBlock div {
+  opacity: 0.7;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentSeats .payForSeatBlock span {
+  margin-left: 2rem;
+  font-weight: 700;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentSeats .payForSeat:first-of-type {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 1rem;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentBuy {
+  margin-left: auto;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentBuy span:first-of-type {
+  opacity: 0.9;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentBuy span:last-of-type {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.secondPagePaymentWrapper .secondPagePaymentBuy a {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -616,11 +661,12 @@ body {
           justify-content: center;
   width: 25rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 1.8rem 0;
+  margin-top: 2rem;
 }
 
-.secondPagePaymentBuy:hover {
+.secondPagePaymentWrapper .secondPagePaymentBuy a:hover {
   color: #621402;
   background-color: rgba(255, 255, 255, 0.5);
   border: 1px solid #FFFFFF;
