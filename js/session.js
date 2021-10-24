@@ -1,6 +1,9 @@
 $(".firstPageSessionPlaceSelect").click(function() {
+    if (!$(this).hasClass("wasSelected")) {
+        $(".firstPageSessionTimeSelect span").html('12:00');
+    }
     $(".firstPageSessionPlaceSelect svg").toggleClass('rotateSvgOpen rotateSvgClose');
-    // $(this).addClass("wasSelected");
+    $(this).addClass("wasSelected");
     $("#placeSelectToggler").toggle('1000');
     let oneCall = false;
     if (!oneCall) {
@@ -12,14 +15,17 @@ $(".firstPageSessionPlaceSelect").click(function() {
 
 
 $(".firstPageSessionTimeSelect").click(function() {
-
-    $(".firstPageSessionTimeSelect svg").toggleClass('rotateSvgOpen rotateSvgClose')
-    $("#timeSelectToggler").toggle('1000');
-    let oneCall = false;
-    if (!oneCall) {
-        $('html, body').animate({scrollTop: '400'}, 1500);
-        oneCall = true;
+    if ($(".firstPageSessionPlaceSelect").hasClass("wasSelected")) {
+        $(".firstPageSessionTimeSelect svg").toggleClass('rotateSvgOpen rotateSvgClose')
+        $("#timeSelectToggler").toggle('1000');
+        let oneCall = false;
+        if (!oneCall) {
+            $('html, body').animate({scrollTop: '400'}, 1500);
+            oneCall = true}
+    } else {
+        alert("Сперва выберите Кинотеатр");
     }
+   
 });
 
 

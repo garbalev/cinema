@@ -127,6 +127,7 @@ function schemeMaker() {
 // schemeMaker();
 
 let cinemaName = "";
+let cinemaTime = "12:00";
 
 $(".firstPageSessionPlaceSelectDown p").click(function () {
   cinemaName = $(this).text();
@@ -134,6 +135,14 @@ $(".firstPageSessionPlaceSelectDown p").click(function () {
   schemeMaker();
   $(".payForSeat").remove();
   $("#cinemaName, #totalPrice").html("");
+});
+
+$(".firstPageSessionTimeSelectDown p").click(function() {
+  cinemaTime = $(this).text();
+  seatsReserved();
+  $(".payForSeat").remove();
+  $("#totalPrice").html("");
+  $("#cinemaName").html(`Кинотеатр ${cinemaName}, время ${cinemaTime}`);
 });
 
 function blocksMaker() {
@@ -193,6 +202,12 @@ function seatsMaker() {
     }
   }
 
+  seatsReserved();
+  
+}
+
+function seatsReserved() {
+  $("[data-seat]").removeClass("reserved, selectedSvg").removeAttr("style");
   for (let i = 0; i < 40; i++) {
     let randomNum = Math.floor(Math.random() * $("[data-seat]").length);
     $("[data-seat]")
@@ -201,7 +216,7 @@ function seatsMaker() {
       .addClass("reserved")
       .css("cursor", "not-allowed");
   }
-}
+};
 
 function seatsAction() {
   let sector = "",
@@ -275,7 +290,7 @@ function seatsAction() {
               </div>
       `);
       $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
-      $("#cinemaName").html(`Кинотеатр ${cinemaName}`);
+      $("#cinemaName").html(`Кинотеатр ${cinemaName}, время ${cinemaTime}`);
     } else {
       alert("Вы не можете выбрать больше 5 мест");
     }
@@ -292,4 +307,4 @@ function seatsAction() {
       e.stopImmediatePropagation();
     });
   });
-}
+};
