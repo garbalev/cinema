@@ -1,5 +1,6 @@
 $(".firstPageSessionPlaceSelect").click(function() {
     $(".firstPageSessionPlaceSelect svg").toggleClass('rotateSvgOpen rotateSvgClose');
+    // $(this).addClass("wasSelected");
     $("#placeSelectToggler").toggle('1000');
     let oneCall = false;
     if (!oneCall) {
@@ -11,6 +12,7 @@ $(".firstPageSessionPlaceSelect").click(function() {
 
 
 $(".firstPageSessionTimeSelect").click(function() {
+
     $(".firstPageSessionTimeSelect svg").toggleClass('rotateSvgOpen rotateSvgClose')
     $("#timeSelectToggler").toggle('1000');
     let oneCall = false;

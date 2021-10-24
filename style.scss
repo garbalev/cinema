@@ -67,6 +67,7 @@ body {
                   @include Roboto();
                   text-decoration: none;
                   margin-right: 2.5rem;
+                  cursor: not-allowed;
                   &:hover {
                     color: rgb(211, 211, 211);
                     // text-decoration: underline;
@@ -145,6 +146,7 @@ body {
           height: 10rem;
           border-radius: 50%;
           margin: auto;
+          cursor: not-allowed;
             svg {
               fill:#621402ad;
               transition: 0.5s;
@@ -508,9 +510,6 @@ body {
             padding: 0.5rem 0 1rem;
 
               .secondPagePaymentSeats {
-                // margin-top: 0.5rem;
-                // display: flex;
-                // flex-direction: column;
                 
                   #cinemaName {
                     opacity: 0.6;
@@ -522,16 +521,13 @@ body {
                     align-items: center;
                     padding: 1rem 0;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-                    
-                    
-                    
 
                       svg {
                         margin: 0 1rem;
                       }
                       
                       &Block {
-                        
+                        padding-right: 2rem;
 
                           div {
                             opacity: 0.7;
@@ -543,8 +539,24 @@ body {
                           }
                       }
 
-                      
+                      .seatRemove {
+                        display: flex;
+                        border: 1px solid rgba(255, 255, 255, 0.5);
+                        padding: 0.7rem;
+                        border-radius: 6px;
+                        margin-left: auto;
+                        font-size: 1.2rem;
+                        margin-right: 3px;
+                        cursor: pointer;
+                        &:hover {
+                          color: #621402;
+                          background-color: rgba(255, 255, 255, 0.5);
+                          border: 1px solid #FFFFFF;
+                        }
+                      }
                   }
+                      
+                  
 
                   .payForSeat:first-of-type {
                     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -578,17 +590,21 @@ body {
                     border-radius: 10px;
                     padding: 1.8rem 0;
                     margin-top: 2rem;
+                    cursor: not-allowed;
                     &:hover {
                       color: #621402;
                       background-color: rgba(255, 255, 255, 0.5);
                       border: 1px solid #FFFFFF;
                     }
                   }
+              
               }
-          }
           
+          }
       }
 }
+
+
 
 .rotateSvgOpen {
   animation: svgOpen 1s;

@@ -193,14 +193,13 @@ function seatsMaker() {
     }
   }
 
-  console.log($("[data-seat]").length);
-  for (let i = 0; i < 15; i++) {
-    console.log(Math.floor(Math.random() * $("[data-seat]").length));
+  for (let i = 0; i < 40; i++) {
     let randomNum = Math.floor(Math.random() * $("[data-seat]").length);
     $("[data-seat]")
       .eq(randomNum)
       .css("fill", "rgba(255, 255, 255, 0.1)")
-      .addClass("reserved");
+      .addClass("reserved")
+      .css("cursor", "not-allowed");
   }
 }
 
@@ -216,6 +215,7 @@ function seatsAction() {
       sector = $(this).parents().eq(1).data("sector");
       row = $(this).parent().data("row");
       seat = $(this).data("seat");
+
       if ($(this).hasClass("reserved")) {
         $("#seatHover").html(`
         <span>Извините,</span>
@@ -228,6 +228,7 @@ function seatsAction() {
         <span>${row}</span>
       `);
       }
+
       $("#seatHover").css({
         display: "flex",
         top: `${topPosition - 95}px`,
@@ -270,6 +271,7 @@ function seatsAction() {
                   <div class="info">${sector}/${row}/${seat}</div>
                   <span>12,00 BYN</span>
                 </div>
+                <a class="seatRemove">Удалить</a>
               </div>
       `);
       $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
@@ -277,5 +279,17 @@ function seatsAction() {
     } else {
       alert("Вы не можете выбрать больше 5 мест");
     }
+
+    $(".seatRemove").click(function (e) {
+      
+      let position = $(this).siblings().eq(1).children().eq(0).text();
+      let places = position.match(/\d{1,2}/g);
+      console.log($(this).parent());
+      let thisSvg = $(`[data-sector = 'Сектор ${places[0]}'] [data-row = 'Ряд ${places[1]}'] [data-seat = 'Место ${places[2]}']`);
+      thisSvg.removeClass("selectedSvg").removeAttr("style");
+      $(this).parent().remove();
+      $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
+      e.stopImmediatePropagation();
+    });
   });
 }
