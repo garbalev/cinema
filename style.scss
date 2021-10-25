@@ -515,7 +515,11 @@ body {
                     opacity: 0.6;
                     
                   }
-                
+                  
+                  .payForSeatWrapper {
+                    display: none;
+                  }
+
                   .payForSeat {
                     display: flex;
                     align-items: center;
@@ -558,9 +562,13 @@ body {
                       
                   
 
-                  .payForSeat:first-of-type {
-                    border-top: 1px solid rgba(255, 255, 255, 0.5);
-                    margin-top: 1rem;
+                  .payForSeatWrapper:first-of-type {
+
+                    .payForSeat {
+                      border-top: 1px solid rgba(255, 255, 255, 0.5);
+                      margin-top: 1rem;
+                    }
+                    
                   }
               }
             

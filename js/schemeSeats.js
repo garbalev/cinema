@@ -133,14 +133,14 @@ $(".firstPageSessionPlaceSelectDown p").click(function () {
   cinemaName = $(this).text();
   cinemaCall = cinemas[$(this).data("cinema")];
   schemeMaker();
-  $(".payForSeat").remove();
+  $(".payForSeatWrapper").remove();
   $("#cinemaName, #totalPrice").html("");
 });
 
 $(".firstPageSessionTimeSelectDown p").click(function() {
   cinemaTime = $(this).text();
   seatsReserved();
-  $(".payForSeat").remove();
+  $(".payForSeatWrapper").remove();
   $("#totalPrice").html("");
   $("#cinemaName").html(`Кинотеатр ${cinemaName}, время ${cinemaTime}`);
 });
@@ -263,14 +263,17 @@ function seatsAction() {
       let regexp = new RegExp(`${sector}.${row}.${seat}`);
       for (let i = 0; i < $(".info").length; i++) {
         if ($(".info").eq(i).text().match(regexp) !== null) {
-          $(".info").eq(i).parents().eq(1).remove();
-          $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
+          $(".info").eq(i).parents().eq(2).slideUp(300, function() {
+            $(this).remove();
+            $("#totalPrice").html(`${12 * $(".payForSeatWrapper").length},00 BYN`);
+          });
         }
       }
     } else if ($(".selectedSvg").length < 5) {
       $(this).css("fill", "rgba(255, 255, 255, 0.7)").addClass("selectedSvg");
       $(".secondPagePaymentSeats").append(`
-      <div class="payForSeat">
+      <div class="payForSeatWrapper">
+        <div class="payForSeat">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="38"
@@ -287,10 +290,12 @@ function seatsAction() {
                   <span>12,00 BYN</span>
                 </div>
                 <a class="seatRemove">Удалить</a>
-              </div>
+        </div>
+      </div>
       `);
-      $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
+      $("#totalPrice").html(`${12 * $(".payForSeatWrapper").length},00 BYN`);
       $("#cinemaName").html(`Кинотеатр ${cinemaName}, время ${cinemaTime}`);
+      $(".payForSeatWrapper").slideDown(200);
     } else {
       alert("Вы не можете выбрать больше 5 мест");
     }
@@ -299,11 +304,12 @@ function seatsAction() {
       
       let position = $(this).siblings().eq(1).children().eq(0).text();
       let places = position.match(/\d{1,2}/g);
-      console.log($(this).parent());
       let thisSvg = $(`[data-sector = 'Сектор ${places[0]}'] [data-row = 'Ряд ${places[1]}'] [data-seat = 'Место ${places[2]}']`);
       thisSvg.removeClass("selectedSvg").removeAttr("style");
-      $(this).parent().remove();
-      $("#totalPrice").html(`${12 * $(".payForSeat").length},00 BYN`);
+      $(this).parents().eq(1).slideUp(300, function() {
+          $(this).remove();
+          $("#totalPrice").html(`${12 * $(".payForSeatWrapper").length},00 BYN`);
+      });
       e.stopImmediatePropagation();
     });
   });
